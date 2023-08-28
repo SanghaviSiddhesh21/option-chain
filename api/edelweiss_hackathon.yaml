@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  title: Bloglite
+  version: 1.0.0
+  description: The purpose of this application is to help it's user to better keep track of their tasks and increase their productivity
+              <h2>Error information</h2>
+                  <table>
+                    <thead>
+                      <th>Error Code &nbsp;</th>
+                      <th>Message</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>E001</td>
+                        <td>Input not of proper format</td>
+                      </tr>
+                      <tr>
+                        <td>E002</td>
+                        <td>User does not exists</td>
+                      </tr>
+                          
+                    </tbody>
+                  </table>
+servers:
+  - url: http://127.0.0.1:8080/
+paths:      
+  /api/single_symbol_options/{symbol}+{expiry}:
+    description: >-
+      To get the new feed for the user on the dashboard
+    get:
+      description: To get new feed for user on the dashboard
+      parameters:
+        - in: path
+          name: symbol
+          required: true
+          schema:
+            type: string
+            example: '12'
+        - in: path
+          name: expiry
+          required: true
+          schema:
+            type: string
+            example: '2023-08-31'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                title: user object
+                type: object
+                properties:
+                  Existense:
+                    type: string
+                    example: true/false                 
+        '404':
+          description: Resource error
+        '500':
+          description: Internal Server Error

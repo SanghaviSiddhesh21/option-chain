@@ -1,0 +1,87 @@
+DELETE FROM all_expiry_symbols_meta;
+DELETE FROM calls;
+DELETE FROM puts;
+DELETE FROM futures;
+DELETE FROM indexes;
+
+CREATE TABLE "all_expiry_symbols_meta" (
+	"symbol"	TEXT NOT NULL,
+	"expiry_date"	DATETIME,
+	"call"	INTEGER DEFAULT 0,
+	"put"	INTEGER DEFAULT 0,
+	"future"	INTEGER DEFAULT 0,
+	PRIMARY KEY("symbol","expiry_date")
+);
+
+CREATE TABLE "calls" (
+	"symbol"	TEXT NOT NULL,
+	"expiry_date"	DATETIME NOT NULL,
+	"strike_price"	INTEGER NOT NULL,
+	"LTP"	INTEGER NOT NULL,
+	"LTQ"	INTEGER NOT NULL,
+	"totalTradedVolume"	INTEGER NOT NULL,
+	"bestBid"	INTEGER NOT NULL,
+	"bestAsk"	INTEGER NOT NULL,
+	"bestBidQty"	INTEGER NOT NULL,
+	"bestAskQty"	INTEGER NOT NULL,
+	"openInterest"	INTEGER NOT NULL,
+	"timestamp"	TEXT NOT NULL,
+	"sequence"	INTEGER NOT NULL,
+	"prevClosePrice"	INTEGER NOT NULL,
+	"prevOpenInterest"	INTEGER NOT NULL,
+	PRIMARY KEY("expiry_date","symbol","strike_price")
+);
+
+CREATE TABLE "futures" (
+	"symbol"	TEXT NOT NULL,
+	"expiry_date"	DATETIME NOT NULL,
+	"LTP"	INTEGER NOT NULL,
+	"LTQ"	INTEGER NOT NULL,
+	"totalTradedVolume"	INTEGER NOT NULL,
+	"bestBid"	INTEGER NOT NULL,
+	"bestAsk"	INTEGER NOT NULL,
+	"bestBidQty"	INTEGER NOT NULL,
+	"bestAskQty"	INTEGER NOT NULL,
+	"openInterest"	INTEGER NOT NULL,
+	"timestamp"	TEXT NOT NULL,
+	"sequence"	INTEGER NOT NULL,
+	"prevClosePrice"	INTEGER NOT NULL,
+	"prevOpenInterest"	INTEGER NOT NULL,
+	PRIMARY KEY("expiry_date","symbol")
+);
+
+CREATE TABLE "indexes" (
+	"symbol"	TEXT NOT NULL,
+	"LTP"	INTEGER NOT NULL,
+	"LTQ"	INTEGER NOT NULL,
+	"totalTradedVolume"	INTEGER NOT NULL,
+	"bestBid"	INTEGER NOT NULL,
+	"bestAsk"	INTEGER NOT NULL,
+	"bestBidQty"	INTEGER NOT NULL,
+	"bestAskQty"	INTEGER NOT NULL,
+	"openInterest"	INTEGER NOT NULL,
+	"timestamp"	TEXT NOT NULL,
+	"sequence"	INTEGER NOT NULL,
+	"prevClosePrice"	INTEGER NOT NULL,
+	"prevOpenInterest"	INTEGER NOT NULL,
+	PRIMARY KEY("symbol")
+);
+
+CREATE TABLE "puts" (
+	"symbol"	TEXT NOT NULL,
+	"expiry_date"	DATETIME NOT NULL,
+	"strike_price"	INTEGER NOT NULL,
+	"LTP"	INTEGER NOT NULL,
+	"LTQ"	INTEGER NOT NULL,
+	"totalTradedVolume"	INTEGER NOT NULL,
+	"bestBid"	INTEGER NOT NULL,
+	"bestAsk"	INTEGER NOT NULL,
+	"bestBidQty"	INTEGER NOT NULL,
+	"bestAskQty"	INTEGER NOT NULL,
+	"openInterest"	INTEGER NOT NULL,
+	"timestamp"	TEXT NOT NULL,
+	"sequence"	INTEGER NOT NULL,
+	"prevClosePrice"	INTEGER NOT NULL,
+	"prevOpenInterest"	INTEGER NOT NULL,
+	PRIMARY KEY("expiry_date","symbol","strike_price")
+);

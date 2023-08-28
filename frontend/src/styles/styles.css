@@ -1,0 +1,224 @@
+.top-navbar {
+    background-color: #023047;
+}
+
+.navbar-inner {
+    margin-left: 10px;
+}
+
+.banner-main {
+    padding: 25px;
+    font-family: 'Inter';
+}
+
+
+.banner-text-left {
+    display: flex;
+    float: left;
+    font-size: 17px;
+    font-weight: 600;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: #3A2E7D;
+}
+
+.banner-text-right {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    flex-direction: row;
+    color: #252525;
+}
+
+.test {
+    text-align: right;
+}
+
+.sub-text {
+    display: block;
+    font-size: 13px;
+    color: #868686;
+    font-weight: 500;
+
+}
+
+.blue-middle-text {
+    color: #3A2E7D;
+    padding: 0px 1px;
+
+}
+
+.banner-button-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dropdown-left {
+    float: left;
+    background-color: transparent;
+}
+
+.dropdown-left-2 {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.button-label {
+    font-weight: 500;
+    color: #3A2E7D;
+    font-size: 17px;
+    float: left;
+
+}
+
+.dropdown-2 {
+    font-size: 14px;
+    color: #3A2E7D;
+    padding-left: 10px;
+    max-height: 2000px;
+    /* Adjust the height as needed */
+    /* overflow-y: auto; */
+}
+
+.or {
+    padding: 0px 10px;
+}
+
+.table-structure {
+    font-family: 'Inter';
+    width: 96.5%;
+    height: 480px;
+    padding-top: 34px;
+    overflow-y: scroll;
+    border: 1px solid #323232;
+    margin-left: 25px;
+    border-radius: 6px;
+}
+
+.table-header-1 {
+    width: 96.5%;
+    margin-left: 25px;
+    height: 35px;
+    background-color: #023047;
+    position: absolute;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.table-header-text-1 {
+    display: flex;
+    padding-top: 4px;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.table-header-main {
+    width: 50px;
+
+}
+
+.strike-price {
+    font-size: 16px;
+    color: #3A2E7D;
+    font-weight: 700;
+
+}
+
+.positive-values {
+    color: #1A936F;
+    font-weight: 700;
+}
+
+.negative-values {
+    color: #FF0000;
+    font-weight: 700;
+}
+
+.blue-values {
+    color: #3A2E7D;
+    font-weight: 700;
+}
+
+.table-container {
+    height: 400px;
+    /* Adjust the height according to your needs */
+}
+
+.table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: scroll;
+}
+
+
+
+.table th,
+.table td {
+    width: calc(100% / 21);
+    padding: 8px;
+    font-size: 14px;
+    word-wrap: break-word;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #333333;
+}
+
+.table th:first-child,
+.table td:first-child {
+    border-left: 1px solid #333333;
+}
+
+.table th:last-child,
+.table td:last-child {
+    border-right: none;
+    /* Remove the right border of the last column */
+}
+
+.header-bracket-value {
+    font-size: 12px;
+}
+
+.table tr,
+.table td {
+    font-size: 13px;
+}
+
+.table th {
+    background-color: #FB8500;
+    color: #ffffff;
+    align-items: center;
+    /* padding-top: 40px; */
+    margin-top: 25px;
+    position: sticky;
+    top: 0;
+}
+
+
+/* CSS for custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9f9f9f;
+}
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}

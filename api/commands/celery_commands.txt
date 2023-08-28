@@ -1,0 +1,6 @@
+Run this command on the terminal upon selecting the parent directory to this folder to start the asynchronous functionality of the system
+
+source env/bin/active -> To start the virtualenvironment
+redis-server -> To start the redis server
+celery -A app.celery beat --max-interval 1 -l info ## To lookout for any asynchronous function to be executed
+celery -A app.celery worker -l info -> Executed the 
